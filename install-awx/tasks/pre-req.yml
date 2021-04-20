@@ -29,7 +29,7 @@
     
 - name: Clonando o REPO
   git:
-    repo: "{{ git_repo }}"
+    repo: "{{git_repo}}"
     dest: /tmp/awx
     force: yes
 - name: Create file
