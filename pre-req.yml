@@ -2,7 +2,7 @@
   shell: curl -fsSL https://get.docker.com | bash
 
 - name: Install a list of packages
-  apt:
+  yum:
     pkg:
     - apt-transport-https
     - ca-certificates
@@ -12,7 +12,6 @@
     - software-properties-common
     - python3-pip
     - npm
-    - python-apt
     - nodejs
     - ansible
     update_cache: yes
@@ -43,7 +42,7 @@
     path: /tmp/awx/installer/inventoryng
     block: |
       #Gerado Via Ansible
-      localhost ansible_connection=local ansible_python_interpreter="/usr/bin/python2.7"
+      localhost ansible_connection=local ansible_python_interpreter="/usr/bin/env python3"
       [all:vars]
       dockerhub_base=ansible
       awx_task_hostname=awx
