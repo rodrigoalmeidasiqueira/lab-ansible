@@ -12,6 +12,7 @@
     - software-properties-common
     - python3-pip
     - npm
+    - python-apt
     - nodejs
     - ansible
     update_cache: yes
